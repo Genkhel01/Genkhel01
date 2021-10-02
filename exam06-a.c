@@ -1,18 +1,43 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-#define days 30
 #define min 740
-#define max 780
+#define max 760
 #define norm 760
-int pressha[days]
+#define days 31
+int press[31];
 
 int main()
 {
 
-    for(int i = 0; i < days; i++)
-        pressha[i] = min + rand() % (max - min + 1)
-    for(int i = 0; i < days; i++)
-        printf("%d\t%d", i+1, pressha[i]);
+  int daysBelow = 0;
+  int daysAbove = 0;
+  int daysExact = 0;
 
+  //Fill days
+  for (int i = 0; i < days; i++)
+  {
+    press[i] = min + rand() % (max - min + 1);
+  }
+  //Print days
+      print("NumDay\t|\tPressure");
+  for (int i = 0; i < days; i++)
+    printf("%d\t|\t%d\n", i + 1, press[i]);
+
+  for (int i = 0; i < days; i++)
+  {
+    int v = press[i];
+    if (v < norm)
+      daysBelow++;
+    else if (v > norm)
+      daysAbove++;
+    else
+      daysExact++;
+  }
+
+  printf("below:\t%d\n", daysBelow);
+  printf("above:\t%d\n", daysAbove);
+  printf("exact:\t%d\n", daysExact);
+
+  return 0;
 }
