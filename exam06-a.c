@@ -5,8 +5,7 @@
 #define min 740
 #define max 780
 #define norm 760
-#define pressha[days]
-
+int pressha[days]
 
 int main()
 {
