@@ -1,0 +1,3 @@
+Video Adapter	Nvidia	2020	40000
+Hard Drive	Western Digital	2019	5000
+Sound Card	Realtek	2015	1000
